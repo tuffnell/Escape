@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Greg and Leonnie</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			.body {
+				color:white;
+				background-color:black;
+			}		
+		</style>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btnSubmit" ).on( "click", function() {
+					var code = $("#idcode").val().toLowerCase();
+					
+					if(code == "3517") 
+					{
+						$("#pError").text("Maybe you should try that code on your present?");
+						$("#pError").addClass("alert alert-success");
+					}
+					else 
+					{
+						$("#pError").text("Danger, incorrect code has been entered.");
+						$("#pError").addClass("alert alert-danger");
+					}
+				});
+			}); 
+		</script>
+	</head>
+	<body class="body">
+		<div class="container pb-5">
+			<h1 class="mb-3 text-center">Final Puzzle</h1>
+            <div class="row mb-3">
+                <div class="col">
+                    <img src="Images/final-1.jpg" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="Images/final-2.jpg" class="img-fluid">
+                </div>
+            </div>
+			<p class="text-center mb-3">
+				I am proud of you for getting this far, I hope you have all of your items. Can you work out the final code?
+			</p>
+			<div class="row mb-5">
+				<div class="col-3"></div>
+				<div class="col">
+					<p id="pError" role="alert"></p>
+					<input id="idcode" type="text" class="w-100 mb-3"></input>
+					<button type="button" id="btnSubmit" class="btn btn-dark w-100">Check Code</button>
+				</div>
+				<div class="col-3"></div>
+			</div>
+            <div class="row mb-5">
+                <div class="col-3"></div>
+                <div class="col">
+                    <a class="btn btn-dark w-100" href="Holodeck.html">Return to the Holodeck</a>
+                </div>
+                <div class="col-3"></div>
+            </div>		
+		</div>
+	</body>
+</html>
+

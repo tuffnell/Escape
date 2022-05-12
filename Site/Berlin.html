@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Greg and Leonnie</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			.body {
+				color:white;
+				background-color:black;
+			}		
+		</style>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btnConfirm" ).on( "click", function() {
+					var person = $("#idPerson").val().toLowerCase();
+					var chocolate = $("#idChocolate").val().toLowerCase();
+					var topping = $("#idTopping").val().toLowerCase();
+
+					if(person == "greg" && (chocolate == "milk" || chocolate == "milk chocolate") && topping == "rice crispies") 
+					{
+						window.open("trapp.html","_self"); 
+					}
+					else 
+					{
+						$("#pError").text("Please enter the correct order");
+						$("#pError").addClass("alert alert-danger");
+					}
+				});
+			}); 
+		</script>
+	</head>
+	<body class="body">
+		<div class="container pb-5">
+			<h1 class="mb-3 text-center">Berlin</h1>
+			<div class="row mb-3">
+				<div class="col">
+					<img src="Images/berlin-4.jpg" class="img-fluid mb-3">		
+					<img src="Images/berlin-1.jpg" class="img-fluid">				
+				</div>
+				<div class="col">
+					<img src="Images/berlin-5.jpg" class="img-fluid mb-3">		
+					<img src="Images/berlin-2.jpg" class="img-fluid">
+				</div>
+			</div>
+			<p class="mb-3">
+				The grid lines start to disappear and when your surroundings finishing loading, you find yourself in a Christmas market in Alexanderplatz, Berlin. Everyone has a drink at the pop up bar before you move on.
+			</p>
+			<p>
+				You make your way through the streets of Berlin and decide to stop at the Ritter shop to get some chocolate. Whilst you are both looking around the shop custom chocolate bar orders are finished. Linzi, Becky and John discuss the orders as they are completed.
+			</p>		
+			<p>
+				Listen to the conversation <a href="https://youtube.com/shorts/CF9qV84izc0?feature=share" target="_blank">here</a>.
+			</p>		
+			<p>
+				The first order to come out ended up with firey chilli chocolate and they had to go and complain. Who ended up complaining and what was their original order?
+			</p>
+			<form class="border p-3 mb-3">
+				<div class="form-group">
+					<label for="idPerson">Person</label>
+					<input class="form-control" id="idPerson">
+				</div>
+				<div class="form-group">
+					<label for="idChocolate">Chocolate</label>
+					<input class="form-control" id="idChocolate">
+				</div>
+				<div class="form-group">
+					<label for="idTopping">Topping</label>
+					<input class="form-control" id="idTopping">
+				</div>
+			</form>
+			<p id="pError" role="alert"></p>
+			<div class="row">
+				<div class="col"></div>
+				<div class="col">
+					<button type="button" id="btnConfirm" class="btn btn-dark w-100">Check Order</button>					
+				</div>
+				<div class="col"></div>
+			</div>			
+			<p class="mt-5">
+				<small>Need help? <a data-toggle="modal" data-target="#gridModal">Maybe this will be useful</a> </small>
+			</p>
+		</div>
+	</body>
+	
+	<div class="modal fade" id="gridModal" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="gridModalLabel">Grid</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<img src="Images/grid.png" class="img-fluid">	
+				</div>
+			</div>
+		</div>
+	</div>
+</html>
+

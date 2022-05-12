@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Greg and Leonnie</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			.body {
+				color:white;
+				background-color:black;
+			}		
+		</style>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btnSubmit" ).on( "click", function() {
+					var code = $("#idhype").val().toLowerCase();
+					
+					if(code == "8.99") 
+					{
+						window.open("Bears.html","_self"); 
+					}
+					else 
+					{
+						$("#pError").text("That is not correct, do you remember pythagoras' theorem?");
+						$("#pError").addClass("alert alert-danger");
+					}
+				});
+			}); 
+		</script>
+	</head>
+	<body class="body">
+		<div class="container">
+			<h1 class="mb-3 text-center">Berlin</h1>
+			<p class="mb-3 text-justify">
+				After sorting out Greg's chocolate, you continue on your trip around Berlin. Whilst walking along the Berlin wall you are handed a leaflet for the escape room "Trap".
+			</p>
+			<div class="row mb-3">
+				<div class="col-3"></div>
+				<div class="col"><img src="Images/leaflet.png" class="img-fluid">	</div>
+				<div class="col-3"></div>
+			</div>
+			<p class="mb-3">
+				You decide to bring up the trip advisor reviews for "Trap" to see if the room is any good. 
+			</p>
+			<div class="row mb-3">
+				<div class="col-3"></div>
+				<div class="col">
+					<img src="Images/trip.png" class="img-fluid mb-3">	
+				</div>
+				<div class="col-3"></div>
+			</div>	
+			<p class="mb-3">
+				Can you solve the puzzle on the leaflet (rounded to 2 decimal places)?
+			</p>
+			<p id="pError" role="alert"></p>
+			<input id="idhype" type="text" class="w-100 mb-3"></input>
+			<div class="row">
+				<div class="col"></div>
+				<div class="col">
+					<button type="button" id="btnSubmit" class="btn btn-dark w-100">Guess</button>
+				</div>
+				<div class="col"></div>
+			</div>		
+		</div>
+	</body>
+</html>
+

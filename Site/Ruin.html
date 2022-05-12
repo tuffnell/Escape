@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Greg and Leonnie</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			.body {
+				color:white;
+				background-color:black;
+			}		
+		</style>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript">
+			$(document).ready(function(){
+				$("#btnSubmit" ).on( "click", function() {
+					var code = $("#idcode").val().toLowerCase();
+					
+					if(code == "unicum") 
+					{
+						window.open("Unicum.html","_self"); 
+					}
+					else 
+					{
+						$("#pError").text("That code will not win you the mystery prize.");
+						$("#pError").addClass("alert alert-danger");
+					}
+				});
+			}); 
+		</script>
+	</head>
+	<body class="body">
+		<div class="container pb-5">
+			<h1 class="mb-3 text-center">Szimpla Kert</h1>
+			<p class="mb-3">
+                It nearly broke your spirits but you finally managed to escape the white room. To celebrate you head to the nearest ruin bar, hoping to find a yourself a drink. 
+            </p>
+            <div class="row mb-3">
+                <div class="col">
+                    <img src="Images/ruin-1.jpg" class="img-fluid mb-3">
+                    <img src="Images/ruin-3.jpg" class="img-fluid mb-3">
+                    <img src="Images/ruin-5.jpg" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="Images/ruin-2.jpg" class="img-fluid mb-3">
+                    <img src="Images/ruin-4.jpg" class="img-fluid mb-3">
+                    <img src="Images/ruin-6.jpg" class="img-fluid">
+                </div>
+            </div>
+            <p class="mb-3 text-justify">
+                You go to a few different ruin bars but end up in Szimpla Kert. You get your drinks and begin to explore the nooks and cranies rooms around the bar. During your explorations you find a scrap of paper on the floor. The bartender says that it's part of a promotion and if you can solve the puzzle then you will win their "mystery prize".
+            </p>
+            <div class="row mb-3">
+                <div class="col"></div>
+                <div class="col">
+                    <img src="Images/ruin-scrap.png" class="img-fluid mb-3">
+                </div>
+                <div class="col"></div>
+            </div>          
+            <p class="mb-3 text-center">
+                Can you solve the puzzle and win the "mystery prize"?
+            </p>      
+			<div class="row">
+                <div class="col-3"></div>
+				<div class="col">
+					<p id="pError" role="alert"></p>
+					<input id="idcode" type="text" class="w-100 mb-3"></input>
+					<button type="button" id="btnSubmit" class="btn btn-dark w-100">Submit Code</button>
+				</div>
+				<div class="col-3"></div>
+			</div>		
+		</div>
+	</body>
+</html>
+

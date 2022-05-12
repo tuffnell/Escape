@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Greg and Leonnie</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			.body {
+				color:white;
+				background-color:black;
+			}		
+		</style>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btnConfirm" ).on( "click", function() {
+					var text = $("#idTime").val().toLowerCase();
+					
+					if(text == "18:54" || text == "1854") 
+					{
+						window.open("Excalibur.html?BigVanilla69!","_self"); 
+					}
+					else 
+					{
+						$("#pError").text("It wasn't there, try another place.");
+						$("#pError").addClass("alert alert-danger");
+					}
+				});
+			}); 
+		</script>
+	</head>
+	<body class="body">
+		<div class="container">
+			<h1 class="mb-3 text-center">Amsterdam</h1>
+			<div class="row mb-3">
+				<div class="col">
+					<img src="Images/dam-4.jpg" class="img-fluid mb-3">						
+					<img src="Images/dam-2.jpg" class="img-fluid">	
+				</div>
+				<div class="col">
+					<img src="Images/dam-3.jpg" class="img-fluid mb-3">								
+				</div>
+			</div>
+			<p class="mb-3 text-justify">
+				You load the program for Amsterdam and find yourself outside a hotel on the outskirts of Amsterdam. You walk to the train station and make your way into the city centre. You spend the day touring around Amsterdam, having a few drinks and enjoying the sites. You take a few pictures throughout your day to remember you stops.
+			</p>
+			<div class="row mb-3">
+				<div class="col">
+					<img src="Images/4. Station.PNG" class="img-fluid mb-3">						
+					<img src="Images/2 Capture.PNG" class="img-fluid">	
+				</div>
+				<div class="col">
+					<img src="Images/3 micro.PNG" class="img-fluid mb-3">		
+					<img src="Images/6 Show.PNG" class="img-fluid">		
+				</div>
+				<div class="col">
+					<img src="Images/5 Quick Pint.PNG" class="img-fluid mb-3">							
+					<img src="Images/1 Amsterdam Centraal.png" class="img-fluid">	
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col"></div>
+				<div class="col">
+					<img src="Images/7 lost.PNG" class="img-fluid">	
+				</div>
+				<div class="col"></div>
+			</div>		
+			<div class="row">
+				<div class="col"></div>
+				<div class="col">
+					<div class="mb-3">
+						<p id="pError" role="alert"></p>
+						<input id="idTime" type="text" class="w-100 mb-3" placeholder="Enter the time hh:mm"></input>
+					</div>
+					<button type="button" id="btnConfirm" class="btn btn-dark w-100">Hunt for the pass</button>					
+				</div>
+				<div class="col"></div>
+			</div>
+		</div>
+	</body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Greg and Leonnie</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			.body {
+				color:white;
+				background-color:black;
+			}		
+		</style>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btnSubmit" ).on( "click", function() {
+					var code = $("#idShot").val().toLowerCase();
+					
+					if(code == "3")  
+					{
+						window.open("soplica.html","_self"); 
+					}
+					else 
+					{
+						$("#pError").text("That was not the shot you wanted. Try another.");
+						$("#pError").addClass("alert alert-danger");
+					}
+				});
+			}); 
+		</script>
+	</head>
+	<body class="body">
+		<div class="container">
+			<h1 class="mb-3 text-center">Shots</h1>         
+            <p class="text-justify">
+                After that ordeal you really need a drink and you finally find the bar that Greg has been looking for another half mile down the street. Time for some shots.
+            </p>
+            <p class="text-justify mb-3">
+                The barman pours you out a selection of shots including 3 chilli, 2 baked bean, 1 bacon and 1 cherry flavoured shots. He then gives you a riddle to find the shot you want.
+            </p>
+            <div class="row mb-3">
+                <div class="col-1"></div>
+				<div class="col">
+					<img src="Images/shots.png" class="img-fluid">			
+				</div>
+                <div class="col-1"></div>   
+			</div>   
+            <p class="text-center">
+                First, however slyly the chilli tries to hide<br/>
+                You will always find some on baked bean's left side;<br/>
+                Second, different are those who stand at either end,<br/>
+                But if you want cherry, neither is your friend;<br/>
+                Third, as you see clearly, all are different size,<br/>
+                Neither dwarf nor giant holds spice in their insides;<br/>
+                Fourth, the second left and the second on the right<br/>
+                Are twins once you taste them, though different at first sight.
+            </p>
+            <p class="mb-3 text-center">
+                Cherry sounds like the best option. Can you find it?
+            </p>
+            <div class="row mb-5">
+                <div class="col"></div>
+                <div class="col">
+                    <p id="pError" role="alert"></p>
+                    <input id="idShot" type="text" class="w-100 mb-3"></input>               
+                    <button type="button" id="btnSubmit" class="btn btn-dark w-100">Down It</button>
+                </div>
+                <div class="col"></div>
+            </div>	
+		</div>
+	</body>
+</html>
+

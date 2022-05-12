@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Greg and Leonnie</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			.body {
+				color:white;
+				background-color:black;
+			}		
+		</style>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btnSubmit" ).on( "click", function() {
+					var code = $("#idBill").val().toLowerCase();
+					
+					if(code == "737.15" || "737.15 pln" || "737.15pln")  
+					{
+						window.open("shots.html","_self"); 
+					}
+					else 
+					{
+						$("#pError").text("Check the bill again, did you miss the tip?");
+						$("#pError").addClass("alert alert-danger");
+					}
+				});
+			}); 
+		</script>
+	</head>
+	<body class="body">
+		<div class="container">
+			<h1 class="mb-3 text-center">Beef N' Pepper</h1>         
+            <p class="mb-3 text-justify">
+                After axe throwing you continue on your trek to try and find the bar that Greg had seen online. Apparantly it's just around the corner. After another 15 minutes you are still yet to find the bar but you do find a steak house and decide to get some food.
+            </p>
+            <div class="row mb-3">
+				<div class="col">
+					<img src="Images/menu.png" class="img-fluid">			
+				</div>
+				<div class="col">
+                    <img src="Images/bill.jpg" class="img-fluid">
+                </div>
+			</div>   
+            <p class="mb-3">
+                How much does the bill come to?
+            </p>
+            <p id="pError" role="alert"></p>
+            <input id="idBill" type="text" class="w-100 mb-3"></input>
+            <div class="row mb-5">
+                <div class="col"></div>
+                <div class="col">
+                    <button type="button" id="btnSubmit" class="btn btn-dark w-100">Check Bill</button>
+                </div>
+                <div class="col"></div>
+            </div>	
+		</div>
+	</body>
+</html>
+
