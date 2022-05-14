@@ -17,13 +17,13 @@
 				$("#btnConfirm" ).on( "click", function() {
 					var text = $("#idCheck").val().toLowerCase();
 					
-					if(text == "peep") 
+					if(text == "bishop") 
 					{
 						window.open("PeepShow.html","_self"); 
 					}
 					else 
 					{
-						$("#pError").text("It wasn't there, try another place.");
+						$("#pError").text("That's not the safe word. Do you want this to end?");
 						$("#pError").addClass("alert alert-danger");
 					}
 				});
@@ -44,7 +44,7 @@
 				<div class="col-2"></div>
 			</div>
 			<p class="mb-3 text-justify">
-				
+				What is the safe word?
 			</p>
 			<div class="row">
 				<div class="col"></div>
